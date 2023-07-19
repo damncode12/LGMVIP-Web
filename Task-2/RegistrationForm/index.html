@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Enrollment Form</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Enrollment Form</h1>
+    <div id="enrollment-form">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email">
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" placeholder="Enter your phone number">
+      </div>
+      <div class="form-group">
+        <label for="website">Website:</label>
+        <input type="url" id="website" placeholder="Enter your website URL">
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select id="gender">
+          <option value="">Select gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="skills">Skills:</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="skills" value="html"> HTML</label>
+          <label><input type="checkbox" name="skills" value="css"> CSS</label>
+          <label><input type="checkbox" name="skills" value="js"> JavaScript</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="upload">Upload Image:</label>
+        <input type="file" id="upload">
+      </div>
+      <button onclick="submitForm()">Submit</button>
+    </div>
+
+    <div id="enrollment-data" style="display: none;">
+      <h2>Enrollment Data</h2>
+      <p id="name-display"></p>
+      <p id="email-display"></p>
+      <p id="phone-display"></p>
+      <p id="website-display"></p>
+      <p id="gender-display"></p>
+      <p id="skills-display"></p>
+      <img id="image-display" src="" alt="Uploaded Image">
+    </div>
+
+    <div id="enrollment-list" style="display: none;">
+      <h2>Enrollment List</h2>
+      <ul id="enrollment-list-data"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
